@@ -6,7 +6,7 @@
 ;; Package: helm-purpose
 ;; Version: 0.1
 ;; Homepage: https://github.com/bmag/helm-purpose
-;; Package-Requires: ((helm "1.9.2") (window-purpose "1.4"))
+;; Package-Requires: ((emacs "24") (helm "1.9.2") (window-purpose "1.4"))
 
 ;; This file is not part of GNU Emacs.
 
