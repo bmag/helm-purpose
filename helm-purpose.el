@@ -51,7 +51,7 @@
 (require 'helm-buffers)
 (require 'window-purpose)
 
-(defconst helm-purpose-version "0.1"
+(defconst helm-purpose-version "0.1.1"
   "Version of helm-purpose.")
 
 (defvar helm-purpose--current-purpose 'edit)
@@ -70,9 +70,10 @@
 The purpose is decided by `helm-purpose--current-purpose'.")
 
 ;;;###autoload
-(defalias 'helm-purpose-mini-ignore-purpose
-  (without-purpose-command #'helm-mini)
-  "Same as `helm-mini', but disable window-purpose while this command executes.")
+(defun helm-purpose-mini-ignore-purpose ()
+  "Same as `helm-mini', but disable window-purpose while the command executes."
+  (interactive)
+  (without-purpose (helm-mini)))
 
 ;;;###autoload
 (defun helm-purpose-switch-buffer-with-purpose (&optional purpose)
