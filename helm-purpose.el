@@ -82,7 +82,7 @@ PURPOSE defaults to the purpose of the current buffer."
   (interactive)
   (setq helm-purpose--current-purpose
         (or purpose (purpose-buffer-purpose (current-buffer))))
-  (helm :sources 'helm-source-purpose-buffers-list
+  (helm :sources '(helm-source-purpose-buffers-list helm-source-buffer-not-found)
         :buffer "*helm purpose*"
         :prompt "Buffer: "))
 
